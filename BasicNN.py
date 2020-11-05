@@ -1,3 +1,4 @@
+
 # -*- coding:utf-8 -*-
 #! usr/bin/env python3
 """
@@ -36,21 +37,6 @@ x_testing_n = torch.normal(-0.6*n_data, 1)
 y_testing_n = torch.ones(data_size)
 x_testing = torch.cat((x_testing_p, x_testing_n), 0).type(torch.FloatTensor)
 y_testing = torch.cat((y_testing_p, y_testing_n), ).type(torch.LongTensor)
-
-
-def model_eval(model, data_testing, label_testing):
-    data_size = data_testing.size(0)
-    model.eval()
-    out = model(data_testing)
-    pred_y = torch.max(F.softmax(out, dim=-1), 1)[1].data.numpy().squeeze()
-    target_y = label_testing.data.numpy()
-    accuracy = sum(pred_y == target_y) / data_size
-    precision_score = metrics.precision_score(target_y, pred_y, average='macro')
-    recall_score = metrics.recall_score(target_y, pred_y, average='macro')
-    f1_score = 2 * precision_score * recall_score / (precision_score + recall_score)
-    print('Testing data: precision: {0:.4f}, recall: {1:.4f}, accuracy: {2:.4f}, f1: {3:.4f}.'
-          .format(precision_score, recall_score, accuracy, f1_score))
-    model.train()
 
 
 class CLS_Dataset(Dataset):
@@ -122,8 +108,8 @@ for epoch in range(1):
         target_y = batch_label.data.numpy()
         accuracy = sum(pred_y == target_y) / batch_size
         print('Training data: Loss：{0:.4f} Accuracy：{1:.2f}'.format(loss, accuracy))
-        if batch_num % report_batch_num == 0:
-            model_eval(net, x_testing, y_testing)
+        #if batch_num % report_batch_num == 0:
+            #model_eval(net, x_testing, y_testing)
         optimizer.step()
 
 """
