@@ -105,35 +105,3 @@ for epoch in range(1):
             #model_eval(net, x_testing, y_testing)
         optimizer.step()
 
-"""
-Training data: Loss：0.5926 Accuracy：0.62
-Testing data: precision: 0.7632, recall: 0.5500, accuracy: 0.5500, f1: 0.6393.
-Training data: Loss：0.5776 Accuracy：0.67
-Training data: Loss：0.5554 Accuracy：0.69
-Testing data: precision: 0.7750, recall: 0.5910, accuracy: 0.5910, f1: 0.6706.
-Training data: Loss：0.5392 Accuracy：0.77
-Training data: Loss：0.5319 Accuracy：0.83
-Testing data: precision: 0.7910, recall: 0.6410, accuracy: 0.6410, f1: 0.7082.
-Training data: Loss：0.4636 Accuracy：0.94
-Training data: Loss：0.4637 Accuracy：0.95
-Testing data: precision: 0.8131, recall: 0.7015, accuracy: 0.7015, f1: 0.7532.
-Training data: Loss：0.4698 Accuracy：0.95
-Training data: Loss：0.4411 Accuracy：0.99
-Testing data: precision: 0.8367, recall: 0.7575, accuracy: 0.7575, f1: 0.7951.
-Training data: Loss：0.4281 Accuracy：1.00
-Training data: Loss：0.3826 Accuracy：0.99
-Testing data: precision: 0.8579, recall: 0.8015, accuracy: 0.8015, f1: 0.8287.
-Training data: Loss：0.3646 Accuracy：1.00
-Training data: Loss：0.3899 Accuracy：0.99
-Testing data: precision: 0.8712, recall: 0.8265, accuracy: 0.8265, f1: 0.8483.
-Training data: Loss：0.3542 Accuracy：1.00
-Training data: Loss：0.3630 Accuracy：1.00
-Testing data: precision: 0.8820, recall: 0.8455, accuracy: 0.8455, f1: 0.8634.
-Training data: Loss：0.3207 Accuracy：1.00
-Training data: Loss：0.3445 Accuracy：1.00
-Testing data: precision: 0.8959, recall: 0.8685, accuracy: 0.8685, f1: 0.8820.
-Training data: Loss：0.3057 Accuracy：1.00
-Training data: Loss：0.2823 Accuracy：1.00
-Testing data: precision: 0.9039, recall: 0.8810, accuracy: 0.8810, f1: 0.8923.
-Training data: Loss：0.2774 Accuracy：1.00
-"""
