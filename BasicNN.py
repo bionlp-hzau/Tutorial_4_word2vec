@@ -30,13 +30,6 @@ y0 = torch.zeros(data_size)
 x1 = torch.normal(-2*n_data, 1)
 y1 = torch.ones(data_size)
 
-# testing data
-x_testing_p = torch.normal(2.8*n_data, 1)
-y_testing_p = torch.zeros(data_size)
-x_testing_n = torch.normal(-0.6*n_data, 1)
-y_testing_n = torch.ones(data_size)
-x_testing = torch.cat((x_testing_p, x_testing_n), 0).type(torch.FloatTensor)
-y_testing = torch.cat((y_testing_p, y_testing_n), ).type(torch.LongTensor)
 
 
 class CLS_Dataset(Dataset):
